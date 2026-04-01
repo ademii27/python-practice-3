@@ -67,11 +67,11 @@ summary = {
 }
 
 print("=" * 30)
-print(f"TRIP SUMMARY - {car_info[0]} {car_info[1]} ({car_info[2]})")
+print("TRIP SUMMARY -", car_info[0], car_info[1], "(", car_info[2], ")")
 print("=" * 30)
 
-print(f"Driver : {summary['driver']}")
-print(f"Stops : {summary['stops']}")
+print("Driver :", summary['driver'])
+print("Stops :", summary['stops'])
 
 print("-" * 30)
 for i in range(len(cities)):
