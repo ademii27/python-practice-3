@@ -1,11 +1,10 @@
-# Task B1 — Car Info (tuple)
 car_info = ("Toyota", "Camry", 2020)
 
 print("=" * 30)
-print(f"{car_info[0]} {car_info[1]} ({car_info[2]})")
+print(car_info[0] + " " + car_info[1] + " (" + str(car_info[2]) + ")")
 print("=" * 30)
 
-# Task B2 — Route Planner (list)
+
 cities = []
 distances = []
 fuel_costs = []
@@ -15,7 +14,7 @@ price = float(input("Enter fuel price (KZT/L): "))
 
 while True:
     city = input("Enter city (or 'done' to finish): ")
-    if city.lower() == "done":
+    if city == "done":
         break
 
     distance = float(input("Enter distance (km): "))
@@ -27,27 +26,26 @@ while True:
     fuel_costs.append(cost)
 
 print("-" * 30)
-print(f"Your route ({len(cities)} stops):")
+print("Your route (", len(cities), "stops):")
 print("-" * 30)
 
 for i in range(len(cities)):
-    print(f"{cities[i]} {distances[i]} km {fuel_costs[i]} KZT")
-
+    print(cities[i], distances[i], "km", fuel_costs[i], "KZT")
 print("-" * 30)
 
-# Task B3 — Unique Cities (set)
+
 visited = set()
 
 while True:
     city = input("Enter city (or 'done' to finish): ")
-    if city.lower() == "done":
+    if city == "done":
         break
     visited.add(city)
 
-print(f"Unique cities visited: {len(visited)}")
+print("Unique cities visited:", len(visited))
 print(visited)
 
-# Task B4 — Trip Summary (dict)
+
 driver = input("Enter driver name: ")
 
 total_distance = sum(distances)
@@ -77,10 +75,10 @@ print(f"Stops : {summary['stops']}")
 
 print("-" * 30)
 for i in range(len(cities)):
-    print(f"{cities[i]} {distances[i]} km {fuel_costs[i]} KZT")
+    print(cities[i], distances[i], "km", fuel_costs[i], "KZT")
 print("-" * 30)
 
-print(f"Total distance : {summary['total_distance']} km")
-print(f"Total fuel cost : {summary['total_cost']} KZT")
-print(f"Category : {summary['category']}")
+print("Total distance :", summary['total_distance'], "km")
+print("Total fuel cost :", summary['total_cost'], "KZT")
+print("Category :", summary['category'])
 print("=" * 30)
